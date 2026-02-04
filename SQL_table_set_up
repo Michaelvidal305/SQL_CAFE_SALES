@@ -1,0 +1,41 @@
+--SQLite Studio table set up
+
+CREATE TABLE coffee_sales (
+    hour_of_day  NUMERIC,
+    cash_type    TEXT,
+    price        NUMERIC,
+    coffe_name   TEXT,
+    time_of_day  TEXT,
+    weekday      TEXT,
+    month_name   TEXT,
+    weekday_sort NUMERIC,
+    month_sort   NUMERIC,
+    date         NUMERIC,
+    time         NUMERIC
+);
+
+INSERT INTO coffee_sales (
+                             hour_of_day,
+                             cash_type,
+                             price,
+                             coffe_name,
+                             time_of_day,
+                             weekday,
+                             month_name,
+                             weekday_sort,
+                             month_sort,
+                             date,
+                             time
+                         )
+                         SELECT hour_of_day,
+                                cash_type,
+                                price,
+                                coffe_name,
+                                time_of_day,
+                                weekday,
+                                month_name,
+                                weekday_sort,
+                                month_sort,
+                                date,
+                                time
+                           FROM coffee_sale;
