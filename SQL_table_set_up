@@ -1,5 +1,5 @@
---SQLite Studio table set up
-
+SQLite Studio table set up
+=============================
 CREATE TABLE coffee_sales (
     hour_of_day  NUMERIC,
     cash_type    TEXT,
