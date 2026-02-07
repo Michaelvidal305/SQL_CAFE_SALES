@@ -1,7 +1,8 @@
 ## SQL_CAFE_SALES
 
 **About Dataset**
-This dataset contains around 3,530 coffee sales transactions recorded in a cafe. It gives info about both customer and transaction details like time of purchase, method of payment, beverage type, and amount spent.
+  
+  This dataset contains around 3,530 coffee sales transactions recorded in a cafe. It gives info about both customer and transaction details like time of purchase, method of payment, beverage type, and amount spent.
 
 **Key Features**
 - "Hour of the day : The hour when the purchase occurred
