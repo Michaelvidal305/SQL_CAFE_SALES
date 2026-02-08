@@ -57,6 +57,7 @@
 - Creating day_name from weekday numbers
 
 - Adding derived fields like hour and full timestamp
+**[view cleaning script](SQL_data_cleaning)**
 
 
 ## 📈 Key Performance Indicators (KPIs)
