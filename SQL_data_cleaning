@@ -46,8 +46,48 @@ Convert date and time fields
 
 **convert text properly from CSV**
 
+--Convert date (MM/DD/YYYY → YYYY‑MM‑DD)
+
 UPDATE coffee_sales
    SET date = SUBSTR(date, 7, 4) || '-' || 
               SUBSTR(date, 1, 2) || '-' || 
               SUBSTR(date, 4, 2) 
  WHERE LENGTH(date) = 10;
+
+--Convert time (HH:MM:SS)
+
+UPDATE coffee_sales
+SET time = TRIM(time);
+
+=============================
+Convert numeric fields
+=============================
+
+UPDATE coffee_sales
+   SET price = CAST (price AS REAL),
+       hour_of_day = CAST (hour_of_day AS INTEGER),
+       weekday_sort = CAST (weekday_sort AS INTEGER),
+       month_sort = CAST (month_sort AS INTEGER);
+
+=============================
+Remove duplicates 
+=============================
+
+DELETE FROM coffee_sales
+      WHERE rowid NOT IN (
+    SELECT MIN(rowid) 
+      FROM coffee_sales
+     GROUP BY date,
+              time,
+              coffee_name,
+              price
+);
+
+=============================
+Add derived field
+=============================
+
+ALTER TABLE coffee_sales ADD full_timestamp TEXT;
+
+UPDATE coffee_sales
+   SET full_timestamp = date || ' ' || time
