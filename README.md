@@ -84,20 +84,14 @@
 
 ## 📊 Data Flow Diagram
 
-'''
+
+```mermaid
 flowchart TD
     A[Raw Café Sales CSV] --> B[SQLiteStudio Import]
     B --> C[Data Cleaning]
     C --> D[Exploratory Queries]
     D --> E[KPIs & Insights]
     E --> F[README Documentation]
-'''
-
-```mermaid
-flowchart TD
-    A[Raw Data] --> B[Cleaning]
-    B --> C[Analysis]
-    C --> D[KPIs]
 ```
 
 
