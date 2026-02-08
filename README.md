@@ -30,8 +30,8 @@
 | Column Name | Description                                           |
 |-------------|-------------------------------------------------------|
 | Hour of the day | The hour when the purchase occurred               |
-| Cash type | Payment method used                                     |
-| Price | The amount of money spent on the purchase                   |
+| Cash type       | Payment method used                               |
+| Price           | The amount of money spent on the purchase         |
 | Coffee name | The type of coffee or drink purchased                 |
 | Time of Day | Morning, Afternoon, Evening, etc                      |
 | Weekday | The day of the week on which the transaction occurred     |
