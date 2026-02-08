@@ -1,25 +1,25 @@
 📈Key Performance Indicators (KPIs)
 
--- Total transactions
+-- Total revenue
 SELECT SUM(price) AS total_revenue
   FROM coffee_sales;
 
--- Avg revenue per transactions
+-- Total transactions
 SELECT COUNT( * ) AS total_transactions
   FROM coffee_sales;
 
--- Revenue by coffee type
+-- Avg revenue per Transaction
 SELECT ROUND(AVG(price), 2) AS avg_revenue_per_sale
   FROM coffee_sales;
 
--- Top 5 best-selling coffee items
+-- Revenue by Coffee Type
 SELECT coffee_name,
        ROUND(SUM(price), 2) AS revenue
   FROM coffee_sales
  GROUP BY coffee_name
  ORDER BY revenue DESC;
 
--- Revenue by day of week
+-- Top 5 best-selling Coffee items
 SELECT coffee_name,
        COUNT( * ) AS total_orders
   FROM coffee_sales
@@ -27,35 +27,35 @@ SELECT coffee_name,
  ORDER BY total_orders DESC
  LIMIT 5;
 
--- Revenue by hour of day
+-- Revenue by day of week
 SELECT weekday,
        ROUND(SUM(price), 2) AS revenue
   FROM coffee_sales
  GROUP BY weekday
  ORDER BY revenue DESC;
 
--- Revenue by Payment method
+-- Revenue by hour of day
 SELECT hour_of_day,
        ROUND(SUM(price), 2) AS revenue
   FROM coffee_sales
  GROUP BY hour_of_day
  ORDER BY hour_of_day;
 
--- Revenue by Payment Method
+-- Revenue by hour of day
 SELECT cash_type,
        ROUND(SUM(price), 2) AS revenue
   FROM coffee_sales
  GROUP BY cash_type
  ORDER BY revenue DESC;
 
--- Monthly revenue
+-- Monthly Revenue
 SELECT month_name,
        ROUND(SUM(price), 2) AS revenue
   FROM coffee_sales
  GROUP BY month_name
  ORDER BY revenue DESC;
 
--- Peak sales day (Highest revenue day)
+-- Peak sales day (highest revenue day)
 SELECT date,
        ROUND(SUM(price), 2) AS revenue
   FROM coffee_sales
