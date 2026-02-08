@@ -131,7 +131,7 @@ UPDATE coffee_sales
 
 1. Total Revenue
     <details>
-      <summary>*Click to expland SQL code*</summary>
+      <summary>Click to expland SQL code</summary>
       
     ```sql
     SELECT SUM(price) AS total_revenue
@@ -140,47 +140,44 @@ UPDATE coffee_sales
     </details>
 
 2. Revenue by Coffee Type
-<details>
-  <summary>Click to expland SQL code</summary>
-  
-```sql
-SELECT coffee_name,
-       ROUND(SUM(price), 2) AS revenue
-  FROM coffee_sales
- GROUP BY coffee_name
- ORDER BY revenue DESC;
-```
-</details>
-
+    <details>
+      <summary>Click to expland SQL code</summary>
+      
+    ```sql
+    SELECT coffee_name,
+           ROUND(SUM(price), 2) AS revenue
+      FROM coffee_sales
+     GROUP BY coffee_name
+     ORDER BY revenue DESC;
+    ```
+    </details>
 
 3. Revenue by Day of Week
-<details>
-  <summary>Click to expland SQL code</summary>
-  
-```sql
-SELECT weekday,
-       ROUND(SUM(price), 2) AS revenue
-  FROM coffee_sales
- GROUP BY weekday
- ORDER BY revenue DESC;
-```
-</details>
-
+    <details>
+      <summary>Click to expland SQL code</summary>
+      
+    ```sql
+    SELECT weekday,
+           ROUND(SUM(price), 2) AS revenue
+      FROM coffee_sales
+     GROUP BY weekday
+     ORDER BY revenue DESC;
+    ```
+    </details>
 
 4. Peak Sales Hour
-<details>
-  <summary>Click to expland SQL code</summary>
-  
-```sql
-SELECT date,
-       ROUND(SUM(price), 2) AS revenue
-  FROM coffee_sales
- GROUP BY date
- ORDER BY revenue DESC
- LIMIT 1;
-```
-</details>
-
+    <details>
+      <summary>Click to expland SQL code</summary>
+      
+    ```sql
+    SELECT date,
+           ROUND(SUM(price), 2) AS revenue
+      FROM coffee_sales
+     GROUP BY date
+     ORDER BY revenue DESC
+     LIMIT 1;
+    ```
+    </details>
 
 ## 📊 Data Flow Diagram
 ```mermaid
