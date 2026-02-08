@@ -60,7 +60,7 @@
 - Adding derived fields like hour and full timestamp
 
  <details>
-  <summary>Click to expand SQL code</Cafe_sales_data_cleaning>
+  <summary>Click to expand SQL code</summary>
 
 ```sql
 -- Checking for NULL values
@@ -135,7 +135,7 @@ UPDATE coffee_sales
 4. Peak Sales Hour
 
 <details>
-  <summary>Click to expland SQL code</Cafe_sales_KPI>
+  <summary>Click to expland SQL code</summary>
 
 '''sql
 -- Total transactions
