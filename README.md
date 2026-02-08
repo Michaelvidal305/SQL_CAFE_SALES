@@ -8,7 +8,7 @@
   This dataset contains around **3,530 café sales transactions** recorded in a cafe. It gives info about both customer and transaction details like time of purchase, method of payment, beverage type, and amount spent. 
 
 
-## 📊Project overview
+## 📊Project Overview
   
   A complete SQL project analyzing 3,530 café sales transactions, including customer behavior, sales patterns, and revenue insights utilizing **SQLite Studio**.
   
@@ -25,7 +25,7 @@
 - How hourly, daily, and monthly trends impact sales
 
 
-## 📁Data description
+## 📁Dataset Overview
 
 | Column Name | Description                                               |
 |-------------|-----------------------------------------------------------|
@@ -190,25 +190,25 @@ flowchart TD
 ```
 
 
-## 📌 Insights Summary
+## 🔍 Insights Summary
 
-- Morning hours generate the highest revenue
+- **Morning hours** generate the highest revenue
 
-- Latte and Cappuccino are the top‑selling beverages
+- **Latte and Cappuccino** are the top‑selling beverages
 
-- Friday is the strongest revenue day
+- **Friday** is the strongest revenue day
 
-- Card payments dominate over cash
+- **Card payments** dominate over cash
 
-- Revenue increases significantly during mid‑month
+- Revenue increases significantly during **mid‑month**
 
-- Customer behavior shows consistent weekday patterns
+- Customer behavior shows consistent **weekday patterns**
 
 
 ## 🛠️ Tools Used
 
-- SQLiteStudio for SQL queries
+- **SQLiteStudio** - SQL querying & data cleaning
 
-- GitHub for version control
+- **GitHub** - version control & documentation
 
-- Markdown for documentation
+- **Markdown** - professional project presentation
