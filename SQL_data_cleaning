@@ -17,7 +17,7 @@ SELECT SUM(CASE WHEN hour_of_day IS NULL THEN 1 ELSE 0 END) AS null_hour_of_day,
   FROM coffee_sales;
 
 =============================
-BLANK OR EMPTY STRINGS
+Blank or empty strings
 =============================
 
 SELECT *
@@ -26,3 +26,28 @@ SELECT *
        coffee_name = '' OR
        weekday = '' OR
        time_of_day = '';
+
+=============================
+Standardize text fields
+=============================
+
+**Fix casing, remove trailing spaces, unify naming**
+
+UPDATE coffee_sales
+   SET coffee_name = UPPER(SUBSTR(TRIM(coffee_name), 1, 1) ) || LOWER(SUBSTR(TRIM(coffee_name), 2) ),
+       cash_type = UPPER(SUBSTR(TRIM(cash_type), 1, 1) ) || LOWER(SUBSTR(TRIM(cash_type), 2) ),
+       time_of_day = UPPER(SUBSTR(TRIM(time_of_day), 1, 1) ) || LOWER(SUBSTR(TRIM(time_of_day), 2) ),
+       weekday = UPPER(SUBSTR(TRIM(weekday), 1, 1) ) || LOWER(SUBSTR(TRIM(weekday), 2) ),
+       month_name = UPPER(SUBSTR(TRIM(month_name), 1, 1) ) || LOWER(SUBSTR(TRIM(month_name), 2) );
+
+=============================
+Convert date and time fields
+=============================
+
+**convert text properly from CSV**
+
+UPDATE coffee_sales
+   SET date = SUBSTR(date, 7, 4) || '-' || 
+              SUBSTR(date, 1, 2) || '-' || 
+              SUBSTR(date, 4, 2) 
+ WHERE LENGTH(date) = 10;
