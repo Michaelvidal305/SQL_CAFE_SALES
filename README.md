@@ -26,16 +26,19 @@
 
 ## 📁Data description
 
-- "Hour of the day : The hour when the purchase occurred
-- Cash type : Payment method used
-- Money : The amount of money spent on the purchase
-- Coffee name : The type of coffee or drink purchased
-- Time of Day : Morning, Afternoon, Evening, etc
-- Weekday : The day of the week on which the transaction occurred
-- Month name : month when the transaction was recorded
-- Sorting of day or month : weekdays and months sorting
-- Date : date of the transaction
-- Time: Exact time of purchase
+| Column Name | Description                                           |
+|-------------|-------------------------------------------------------|
+| Hour of the day | The hour when the purchase occurred               |
+| Cash type | Payment method used                                     |
+| Price | The amount of money spent on the purchase                   |
+| Coffee name | The type of coffee or drink purchased                 |
+| Time of Day | Morning, Afternoon, Evening, etc                      |
+| Weekday | The day of the week on which the transaction occurred     |
+| Month name | The month when the transaction was recorded            |
+| Sorting of day or month | Weekdays and months sorting               |
+| Date | Date of the transaction                                      |
+| Time | Time of purchase                                             |
+| Full timestamps | Date & time of purchase                           |
 
 
 ## 🧹 Data Cleaning Steps**
