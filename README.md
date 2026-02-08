@@ -130,14 +130,14 @@ UPDATE coffee_sales
 ## 📈 Key Performance Indicators (KPIs)
 
 1. Total Revenue
-<details>
-  <summary>Click to expland SQL code</summary>
-  
-```sql
-SELECT SUM(price) AS total_revenue
-  FROM coffee_sales;
-```
-</details>
+    <details>
+      <summary>*Click to expland SQL code*</summary>
+      
+    ```sql
+    SELECT SUM(price) AS total_revenue
+      FROM coffee_sales;
+    ```
+    </details>
 
 2. Revenue by Coffee Type
 <details>
