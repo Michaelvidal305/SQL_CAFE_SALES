@@ -10,7 +10,7 @@
 
 ## 📊Project overview
   
-  A complete SQL project analyzing 3,530 café sales transactions, including customer behavior, sales patterns, and revenue insights.
+  A complete SQL project analyzing 3,530 café sales transactions, including customer behavior, sales patterns, and revenue insights utilizing **SQLite Studio**.
   
   This project explores a real‑world coffee shop dataset and answers key business questions using SQL:
 
