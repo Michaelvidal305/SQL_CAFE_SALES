@@ -44,7 +44,7 @@
 
 ## 🧹 Data Cleaning Steps
 
-Cleaning included:
+*Cleaning included:*
 
 - Fixing inconsistent text formatting
 
