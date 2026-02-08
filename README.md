@@ -93,6 +93,14 @@ flowchart TD
     E --> F[README Documentation]
 '''
 
+```mermaid
+flowchart TD
+    A[Raw Data] --> B[Cleaning]
+    B --> C[Analysis]
+    C --> D[KPIs]
+```
+
+
 ## 🛠️ Tools Used
 
 - SQLiteStudio for SQL queries
