@@ -83,14 +83,15 @@
 - Revenue increases significantly during mid‑month
 
 ## 📊 Data Flow Diagram
-  
-  flowchart TD
+
+'''mermaid
+flowchart TD
     A[Raw Café Sales CSV] --> B[SQLiteStudio Import]
     B --> C[Data Cleaning]
     C --> D[Exploratory Queries]
     D --> E[KPIs & Insights]
     E --> F[README Documentation]
-
+'''
 
 ## 🛠️ Tools Used
 
