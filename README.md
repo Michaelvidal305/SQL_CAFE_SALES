@@ -3,12 +3,12 @@
 ## 📂 Data Source
 - [view the dataset Cafe_sales.csv](data/Cafe_sales.csv)
 
-**About Dataset**
+## About Dataset
   
-  This dataset contains around 3,530 café sales transactions recorded in a cafe. It gives info about both customer and transaction details like time of purchase, method of payment, beverage type, and amount spent. 
+  This dataset contains around **3,530 café sales transactions** recorded in a cafe. It gives info about both customer and transaction details like time of purchase, method of payment, beverage type, and amount spent. 
 
 
-**📊Project overview**
+## 📊Project overview
 
   A complete SQL project analyzing 3,530 café sales transactions, including customer behavior, sales patterns, and revenue insights.
   This project explores a real‑world coffee shop dataset and answers key business questions using SQL:
@@ -24,7 +24,7 @@
 - Hourly, daily, and monthly sales trends
 
 
-**📁Data description**
+## 📁Data description
 
 - "Hour of the day : The hour when the purchase occurred
 - Cash type : Payment method used
@@ -38,7 +38,7 @@
 - Time: Exact time of purchase
 
 
-**🧹 Data Cleaning Steps**
+## 🧹 Data Cleaning Steps**
 
 Cleaning included:
 
@@ -55,7 +55,7 @@ Cleaning included:
 - Adding derived fields like hour and full timestamp
 
 
-**📈 Key Performance Indicators (KPIs)**
+## 📈 Key Performance Indicators (KPIs)
 
 1. Total Revenue
 2. Revenue by Coffee Type
@@ -63,7 +63,7 @@ Cleaning included:
 4. Peak Sales Hour
 
 
-**📌 Insights Summary**
+## 📌 Insights Summary
 
 - Peak revenue occurs during morning hours
 
@@ -76,7 +76,7 @@ Cleaning included:
 - Revenue increases significantly during mid‑month
 
 
-**🛠️ Tools Used**
+## 🛠️ Tools Used
 
 - SQLiteStudio for SQL queries
 
