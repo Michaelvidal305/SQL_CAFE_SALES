@@ -130,70 +130,48 @@ UPDATE coffee_sales
 ## 📈 Key Performance Indicators (KPIs)
 
 1. Total Revenue
-2. Revenue by Coffee Type
-3. Revenue by Day of Week
-4. Peak Sales Hour
-
 <details>
   <summary>Click to expland SQL code</summary>
-
+  
 ```sql
--- Total transactions
 SELECT SUM(price) AS total_revenue
   FROM coffee_sales;
+```
+</details>
 
--- Avg revenue per transactions
-SELECT COUNT( * ) AS total_transactions
-  FROM coffee_sales;
-
--- Revenue by coffee type
-SELECT ROUND(AVG(price), 2) AS avg_revenue_per_sale
-  FROM coffee_sales;
-
--- Top 5 best-selling coffee items
+2. Revenue by Coffee Type
+<details>
+  <summary>Click to expland SQL code</summary>
+  
+```sql
 SELECT coffee_name,
        ROUND(SUM(price), 2) AS revenue
   FROM coffee_sales
  GROUP BY coffee_name
  ORDER BY revenue DESC;
+```
+</details>
 
--- Revenue by day of week
-SELECT coffee_name,
-       COUNT( * ) AS total_orders
-  FROM coffee_sales
- GROUP BY coffee_name
- ORDER BY total_orders DESC
- LIMIT 5;
 
--- Revenue by hour of day
+3. Revenue by Day of Week
+<details>
+  <summary>Click to expland SQL code</summary>
+  
+```sql
 SELECT weekday,
        ROUND(SUM(price), 2) AS revenue
   FROM coffee_sales
  GROUP BY weekday
  ORDER BY revenue DESC;
+```
+</details>
 
--- Revenue by Payment method
-SELECT hour_of_day,
-       ROUND(SUM(price), 2) AS revenue
-  FROM coffee_sales
- GROUP BY hour_of_day
- ORDER BY hour_of_day;
 
--- Revenue by Payment Method
-SELECT cash_type,
-       ROUND(SUM(price), 2) AS revenue
-  FROM coffee_sales
- GROUP BY cash_type
- ORDER BY revenue DESC;
-
--- Monthly revenue
-SELECT month_name,
-       ROUND(SUM(price), 2) AS revenue
-  FROM coffee_sales
- GROUP BY month_name
- ORDER BY revenue DESC;
-
--- Peak sales day (Highest revenue day)
+4. Peak Sales Hour
+<details>
+  <summary>Click to expland SQL code</summary>
+  
+```sql
 SELECT date,
        ROUND(SUM(price), 2) AS revenue
   FROM coffee_sales
@@ -203,9 +181,8 @@ SELECT date,
 ```
 </details>
 
+
 ## 📊 Data Flow Diagram
-
-
 ```mermaid
 flowchart TD
     A[Raw Café Sales CSV] --> B[SQLiteStudio Import]
