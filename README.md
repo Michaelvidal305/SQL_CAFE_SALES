@@ -27,15 +27,15 @@
 
 ## 📁Data description
 
-| Column Name | Description                                           |
-|-------------|-------------------------------------------------------|
-| Hour of the day | The hour when the purchase occurred               |
-| Cash type       | Payment method used                               |
-| Price           | The amount of money spent on the purchase         |
-| Coffee name | The type of coffee or drink purchased                 |
-| Time of Day | Morning, Afternoon, Evening, etc                      |
-| Weekday | The day of the week on which the transaction occurred     |
-| Month name | The month when the transaction was recorded            |
+| Column Name | Description                                               |
+|-------------|-----------------------------------------------------------|
+| Hour of the day | The hour when the purchase occurred                   |
+| Cash type       | Payment method used                                   |
+| Price           | The amount of money spent on the purchase             |
+| Coffee name     | The type of coffee or drink purchased                 |
+| Time of Day     | Morning, Afternoon, Evening, etc                      |
+| Weekday         | The day of the week on which the transaction occurred |
+| Month name      | The month when the transaction was recorded           |
 | Sorting of day or month | Weekdays and months sorting               |
 | Date | Date of the transaction                                      |
 | Time | Time of purchase                                             |
