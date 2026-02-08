@@ -137,7 +137,7 @@ UPDATE coffee_sales
 <details>
   <summary>Click to expland SQL code</summary>
 
-'''sql
+```sql
 -- Total transactions
 SELECT SUM(price) AS total_revenue
   FROM coffee_sales;
@@ -200,7 +200,7 @@ SELECT date,
  GROUP BY date
  ORDER BY revenue DESC
  LIMIT 1;
-'''
+```
 </details>
 
 ## 📊 Data Flow Diagram
