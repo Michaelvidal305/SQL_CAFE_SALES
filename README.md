@@ -43,6 +43,24 @@
 
 
 ## 🧹 Data Cleaning Steps
+<details>
+  <summary>Click to expand SQL code</summary>
+
+```sql
+SELECT SUM(CASE WHEN hour_of_day IS NULL THEN 1 ELSE 0 END) AS null_hour_of_day,
+       SUM(CASE WHEN cash_type IS NULL THEN 1 ELSE 0 END) AS null_cash_type,
+       SUM(CASE WHEN price IS NULL THEN 1 ELSE 0 END) AS null_price,
+       SUM(CASE WHEN coffee_name IS NULL THEN 1 ELSE 0 END) AS null_coffee_name,
+       SUM(CASE WHEN time_of_day IS NULL THEN 1 ELSE 0 END) AS null_time_of_day,
+       SUM(CASE WHEN weekday IS NULL THEN 1 ELSE 0 END) AS null_weekday,
+       SUM(CASE WHEN month_name IS NULL THEN 1 ELSE 0 END) AS null_month_name,
+       SUM(CASE WHEN weekday_sort IS NULL THEN 1 ELSE 0 END) AS null_weekday_sort,
+       SUM(CASE WHEN date IS NULL THEN 1 ELSE 0 END) AS null_date,
+       SUM(CASE WHEN time IS NULL THEN 1 ELSE 0 END) AS null_time
+  FROM coffee_sales;
+```
+
+</details>
 
 *Cleaning included:*
 
