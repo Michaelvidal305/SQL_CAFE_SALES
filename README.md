@@ -1,7 +1,7 @@
 ## ☕SQL Café Sales Analysis
 
 ## 📂 Data Source
-- [view the csv.dataset](
+- [view the csv.dataset](data/Cafe_sales.csv)
 
 **About Dataset**
   
