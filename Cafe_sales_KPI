@@ -1,4 +1,4 @@
-Key Performance Indicators (KPIs)
+📈Key Performance Indicators (KPIs)
 
 --Total revenue
 SELECT SUM(price) AS total_revenue
