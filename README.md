@@ -9,8 +9,9 @@
 
 
 ## 📊Project overview
-
+  
   A complete SQL project analyzing 3,530 café sales transactions, including customer behavior, sales patterns, and revenue insights.
+  
   This project explores a real‑world coffee shop dataset and answers key business questions using SQL:
 
 - What time of day generates the most revenue
@@ -41,7 +42,7 @@
 | Full timestamps | Date & time of purchase                           |
 
 
-## 🧹 Data Cleaning Steps**
+## 🧹 Data Cleaning Steps
 
 Cleaning included:
 
