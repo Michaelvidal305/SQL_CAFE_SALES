@@ -129,7 +129,7 @@ UPDATE coffee_sales
 
 ## 📈 Key Performance Indicators (KPIs)
 
-1. Total Revenue
+1. **Total Revenue**
     <details>
       <summary>Click to expland SQL code</summary>
       
@@ -139,7 +139,7 @@ UPDATE coffee_sales
     ```
     </details>
 
-2. Revenue by Coffee Type
+2. **Revenue by Coffee Type**
     <details>
       <summary>Click to expland SQL code</summary>
       
@@ -152,7 +152,7 @@ UPDATE coffee_sales
     ```
     </details>
 
-3. Revenue by Day of Week
+3. **Revenue by Day of Week**
     <details>
       <summary>Click to expland SQL code</summary>
       
@@ -165,7 +165,7 @@ UPDATE coffee_sales
     ```
     </details>
 
-4. Peak Sales Hour
+4. **Peak Sales Hour**
     <details>
       <summary>Click to expland SQL code</summary>
       
