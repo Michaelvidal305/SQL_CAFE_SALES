@@ -70,18 +70,6 @@
 
    **[View KPIs SQLscript](Cafe_sales_KPI)**
 
-## 📌 Insights Summary
-
-- Peak revenue occurs during morning hours
-
-- Latte and Cappuccino are top sellers
-
-- Friday shows the highest sales volume
-
-- Card payments dominate over cash
-
-- Revenue increases significantly during mid‑month
-
 ## 📊 Data Flow Diagram
 
 
@@ -93,6 +81,21 @@ flowchart TD
     D --> E[KPIs & Insights]
     E --> F[README Documentation]
 ```
+
+
+## 📌 Insights Summary
+
+- Morning hours generate the highest revenue
+
+- Latte and Cappuccino are the top‑selling beverages
+
+- Friday is the strongest revenue day
+
+- Card payments dominate over cash
+
+- Revenue increases significantly during mid‑month
+
+- Customer behavior shows consistent weekday patterns
 
 
 ## 🛠️ Tools Used
