@@ -58,7 +58,7 @@
 
 - Adding derived fields like hour and full timestamp
 
-  **[view cleaning script](SQL_data_cleaning)**
+  **[view cleaning script](Cafe_sales_data_cleaning)**
 
 
 ## 📈 Key Performance Indicators (KPIs)
@@ -68,6 +68,7 @@
 3. Revenue by Day of Week
 4. Peak Sales Hour
 
+   **[view KPIs script](Cafe_sales_KPI)**
 
 ## 📌 Insights Summary
 
