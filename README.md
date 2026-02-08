@@ -84,7 +84,7 @@
 
 ## 📊 Data Flow Diagram
 
-'''mermaid
+'''
 flowchart TD
     A[Raw Café Sales CSV] --> B[SQLiteStudio Import]
     B --> C[Data Cleaning]
