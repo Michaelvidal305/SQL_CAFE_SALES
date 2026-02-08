@@ -43,24 +43,7 @@
 
 
 ## 🧹 Data Cleaning Steps
-<details>
-  <summary>Click to expand SQL code</summary>
 
-```sql
-SELECT SUM(CASE WHEN hour_of_day IS NULL THEN 1 ELSE 0 END) AS null_hour_of_day,
-       SUM(CASE WHEN cash_type IS NULL THEN 1 ELSE 0 END) AS null_cash_type,
-       SUM(CASE WHEN price IS NULL THEN 1 ELSE 0 END) AS null_price,
-       SUM(CASE WHEN coffee_name IS NULL THEN 1 ELSE 0 END) AS null_coffee_name,
-       SUM(CASE WHEN time_of_day IS NULL THEN 1 ELSE 0 END) AS null_time_of_day,
-       SUM(CASE WHEN weekday IS NULL THEN 1 ELSE 0 END) AS null_weekday,
-       SUM(CASE WHEN month_name IS NULL THEN 1 ELSE 0 END) AS null_month_name,
-       SUM(CASE WHEN weekday_sort IS NULL THEN 1 ELSE 0 END) AS null_weekday_sort,
-       SUM(CASE WHEN date IS NULL THEN 1 ELSE 0 END) AS null_date,
-       SUM(CASE WHEN time IS NULL THEN 1 ELSE 0 END) AS null_time
-  FROM coffee_sales;
-```
-
-</details>
 
 *Cleaning included:*
 
@@ -76,7 +59,72 @@ SELECT SUM(CASE WHEN hour_of_day IS NULL THEN 1 ELSE 0 END) AS null_hour_of_day,
 
 - Adding derived fields like hour and full timestamp
 
-  **[View cleaning SQL script](Cafe_sales_data_cleaning)**
+ <details>
+  <summary>Click to expand SQL code</summary>
+
+```sql
+-- Checking for NULL values
+SELECT SUM(CASE WHEN hour_of_day IS NULL THEN 1 ELSE 0 END) AS null_hour_of_day,
+       SUM(CASE WHEN cash_type IS NULL THEN 1 ELSE 0 END) AS null_cash_type,
+       SUM(CASE WHEN price IS NULL THEN 1 ELSE 0 END) AS null_price,
+       SUM(CASE WHEN coffee_name IS NULL THEN 1 ELSE 0 END) AS null_coffee_name,
+       SUM(CASE WHEN time_of_day IS NULL THEN 1 ELSE 0 END) AS null_time_of_day,
+       SUM(CASE WHEN weekday IS NULL THEN 1 ELSE 0 END) AS null_weekday,
+       SUM(CASE WHEN month_name IS NULL THEN 1 ELSE 0 END) AS null_month_name,
+       SUM(CASE WHEN weekday_sort IS NULL THEN 1 ELSE 0 END) AS null_weekday_sort,
+       SUM(CASE WHEN date IS NULL THEN 1 ELSE 0 END) AS null_date,
+       SUM(CASE WHEN time IS NULL THEN 1 ELSE 0 END) AS null_time
+  FROM coffee_sales;
+
+-- Remove duplicates
+UPDATE coffee_sales
+   SET price = CAST (price AS REAL),
+       hour_of_day = CAST (hour_of_day AS INTEGER),
+       weekday_sort = CAST (weekday_sort AS INTEGER),
+       month_sort = CAST (month_sort AS INTEGER);
+
+-- Checking for blank or empty strings
+SELECT *
+  FROM coffee_sales
+ WHERE cash_type = '' OR
+       coffee_name = '' OR
+       weekday = '' OR
+       time_of_day = '';
+
+-- Standardize text fields: Fix casing, remove trailing spaces, unify naming
+UPDATE coffee_sales
+   SET coffee_name = UPPER(SUBSTR(TRIM(coffee_name), 1, 1) ) || LOWER(SUBSTR(TRIM(coffee_name), 2) ),
+       cash_type = UPPER(SUBSTR(TRIM(cash_type), 1, 1) ) || LOWER(SUBSTR(TRIM(cash_type), 2) ),
+       time_of_day = UPPER(SUBSTR(TRIM(time_of_day), 1, 1) ) || LOWER(SUBSTR(TRIM(time_of_day), 2) ),
+       weekday = UPPER(SUBSTR(TRIM(weekday), 1, 1) ) || LOWER(SUBSTR(TRIM(weekday), 2) ),
+       month_name = UPPER(SUBSTR(TRIM(month_name), 1, 1) ) || LOWER(SUBSTR(TRIM(month_name), 2) );
+
+-- Convert date (MM/DD/YYYY → YYYY‑MM‑DD)
+UPDATE coffee_sales
+   SET date = SUBSTR(date, 7, 4) || '-' || 
+              SUBSTR(date, 1, 2) || '-' || 
+              SUBSTR(date, 4, 2) 
+ WHERE LENGTH(date) = 10;
+
+--Convert time (HH:MM:SS)
+UPDATE coffee_sales
+SET time = TRIM(time);
+
+-- Convert numeric fields
+UPDATE coffee_sales
+   SET price = CAST (price AS REAL),
+       hour_of_day = CAST (hour_of_day AS INTEGER),
+       weekday_sort = CAST (weekday_sort AS INTEGER),
+       month_sort = CAST (month_sort AS INTEGER);
+
+-- Add derived field
+ALTER TABLE coffee_sales ADD full_timestamp TEXT;
+
+UPDATE coffee_sales
+   SET full_timestamp = date || ' ' || time
+```
+
+</details>
 
 
 ## 📈 Key Performance Indicators (KPIs)
