@@ -12,17 +12,17 @@
   
   A complete SQL project analyzing 3,530 café sales transactions, including customer behavior, sales patterns, and revenue insights utilizing **SQLite Studio**.
   
-  This project explores a real‑world coffee shop dataset and answers key business questions using SQL:
+  This project answers key business questions such as:
 
-- What time of day generates the most revenue
+- Which coffee products generate the most revenue
 
-- Which coffee types are most profitable
+- What time of day customers spend the most
 
-- How payment methods affect sales
+- Which payment methods dominate
 
-- Which days and months perform best
+- What days and months perform best
 
-- Hourly, daily, and monthly sales trends
+- How hourly, daily, and monthly trends impact sales
 
 
 ## 📁Data description
